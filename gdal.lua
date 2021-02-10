@@ -1327,7 +1327,7 @@ project "gdal"
     configuration { "cocoa_sim64_debug" }
 
       defines {
-        intel_intrinsic_defines,
+        neon_defines,
       }
 
     -- -------------------------------------------------------------
@@ -1343,7 +1343,7 @@ project "gdal"
     configuration { "cocoa_sim64_release" }
 
       defines {
-        intel_intrinsic_defines,
+        neon_defines,
       }
 
     -- -------------------------------------------------------------
@@ -1443,7 +1443,7 @@ project "gdal"
     configuration { "ios_sim64_debug" }
 
       defines {
-        intel_intrinsic_defines,
+        neon_defines,
       }
 
     -- -------------------------------------------------------------
@@ -1459,7 +1459,7 @@ project "gdal"
     configuration { "ios_sim64_release" }
 
       defines {
-        intel_intrinsic_defines,
+        neon_defines,
       }
 
     -- -------------------------------------------------------------
