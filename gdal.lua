@@ -1097,13 +1097,6 @@ if (_PLATFORM_COCOA) then
   defines {
     intel_intrinsic_defines,
   }
-
-  configuration { "*sim64*" } -- remove once sim64 is simx64
-
-  defines {
-    intel_intrinsic_defines,
-  }
-
 end
 
 if (_PLATFORM_IOS) then
@@ -1122,13 +1115,6 @@ if (_PLATFORM_IOS) then
   defines {
     intel_intrinsic_defines,
   }
-
-  configuration { "*sim64*" } -- remove once sim64 is simx64
-
-  defines {
-    intel_intrinsic_defines,
-  }
-
 end
 
 if (_PLATFORM_LINUX) then
