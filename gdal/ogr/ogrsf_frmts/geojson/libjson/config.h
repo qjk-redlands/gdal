@@ -95,7 +95,11 @@
 #endif
 
 /* Define to 1 if you have the <unistd.h> header file. */
+#if defined _WIN32 || defined(__linux__)
 #undef HAVE_UNISTD_H
+#else
+#define HAVE_UNISTD_H 1
+#endif
 
 /* Define to 1 if you have the `vprintf' function. */
 #ifdef _MSC_VER
