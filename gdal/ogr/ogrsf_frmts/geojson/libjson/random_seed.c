@@ -253,6 +253,8 @@ static int get_dev_random_seed(int *seed)
 
 #ifdef WIN32
 
+#if !defined(WINAPI_FAMILY) || (WINAPI_FAMILY == WINAPI_FAMILY_DESKTOP_APP)
+
 #define HAVE_CRYPTGENRANDOM 1
 
 /* clang-format off */
@@ -297,6 +299,7 @@ static int get_cryptgenrandom_seed(int *seed)
 	return 0;
 }
 
+#endif
 #endif
 
 /* get_time_seed */
