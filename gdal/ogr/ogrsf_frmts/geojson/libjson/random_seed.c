@@ -253,7 +253,7 @@ static int get_dev_random_seed(int *seed)
 
 #ifdef WIN32
 
-#if !defined(WINAPI_FAMILY) || (WINAPI_FAMILY == WINAPI_FAMILY_DESKTOP_APP)
+#if !defined(RTC_WINDOWS_UNIVERSAL)
 
 #define HAVE_CRYPTGENRANDOM 1
 
