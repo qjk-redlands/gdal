@@ -18,7 +18,7 @@
 #include "math_compat.h"
 #include <assert.h>
 #include <limits.h>
-#include <math.h>
+//#include <math.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
