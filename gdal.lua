@@ -703,6 +703,8 @@ files {
   "gdal/ogr/ogrsf_frmts/geojson/libjson/json_util.c",
   "gdal/ogr/ogrsf_frmts/geojson/libjson/linkhash.c",
   "gdal/ogr/ogrsf_frmts/geojson/libjson/printbuf.c",
+  "gdal/ogr/ogrsf_frmts/geojson/libjson/random_seed.c",
+  "gdal/ogr/ogrsf_frmts/geojson/libjson/strerror_override.c",
   -- "gdal/ogr/ogrsf_frmts/geojson/ogresrijsondriver.cpp",
   "gdal/ogr/ogrsf_frmts/geojson/ogresrijsonreader.cpp",
   "gdal/ogr/ogrsf_frmts/geojson/ogrgeojsondatasource.cpp",
