@@ -1061,13 +1061,13 @@ if (_PLATFORM_ANDROID) then
   configuration { "*arm64*" }
 
   defines {
-    neon_defines,
+    "KDU_NO_NEON", -- neon intrinsic vqrdmlahq_s16 not available for arm64. Revisit later.
   }
 
   configuration { "*armv7*" }
 
   defines {
-    neon_defines,
+    "KDU_NO_NEON", -- neon intrinsic vcvtnq_s32_f32 not available for armv7. Revisit later.
   }
 
   configuration { "*x64*" }
@@ -1083,24 +1083,6 @@ if (_PLATFORM_ANDROID) then
   }
 end
 
-if (_PLATFORM_COCOA) then
-  defines {
-    cocoa_defines,
-  }
-
-  configuration { "*arm64*" }
-
-  defines {
-    neon_defines,
-  }
-
-  configuration { "*x64*" }
-
-  defines {
-    intel_intrinsic_defines,
-  }
-end
-
 if (_PLATFORM_IOS) then
   defines {
     cocoa_defines,
@@ -1109,7 +1091,7 @@ if (_PLATFORM_IOS) then
   configuration { "*arm64*" }
 
   defines {
-    neon_defines,
+    "KDU_NO_NEON", -- neon intrinsics for arm64 crash the compiler. Revisit later
   }
 
   configuration { "*x64*" }
