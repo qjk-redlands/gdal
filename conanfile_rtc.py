@@ -18,6 +18,8 @@ class GDALConan(ConanFile):
         relative = "3rdparty/gdal/"
 
         # headers
+        self.copy("*.h*", src=base + "gdal/frmts", dst=relative + "gdal/frmts", excludes=("*.html", "*.in", "*.vc"))
+        self.copy("*.inc", src=base + "gdal/frmts", dst=relative + "gdal/frmts")
         self.copy("*.h*", src=base + "gdal/gcore", dst=relative + "gdal/gcore", excludes=("*.html", "*.in", "*.vc"))
         self.copy("*.h*", src=base + "gdal/ogr", dst=relative + "gdal/ogr", excludes=("*.html", "*.in", "*.vc"))
         self.copy("*.h*", src=base + "gdal/port", dst=relative + "gdal/port", excludes=("*.html", "*.in", "*.vc"))
