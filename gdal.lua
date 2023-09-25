@@ -1058,6 +1058,10 @@ if (_PLATFORM_ANDROID) then
     "KDU_NO_THREADS", -- Android has very limited pthread support for our platforms.  Revisit later
   }
 
+  buildoptions {
+    "-Wno-error=implicit-function-declaration", -- turn off clang 16+ warning that turned to error for ISO 99 calls
+  }
+
   configuration { "*arm64*" }
 
   defines {
@@ -1088,6 +1092,10 @@ if (_PLATFORM_IOS) then
     cocoa_defines,
   }
 
+  buildoptions {
+    "-Wno-error=implicit-function-declaration", -- turn off clang 16+ warning that turned to error for ISO 99 calls
+  }
+
   configuration { "*arm64*" }
 
   defines {
@@ -1102,6 +1110,10 @@ if (_PLATFORM_IOS) then
 end
 
 if (_PLATFORM_LINUX) then
+  buildoptions {
+    "-Wno-error=implicit-function-declaration", -- turn off clang 16+ warning that turned to error for ISO 99 calls
+  }
+
   configuration { "ARM64" }
 
   defines {
@@ -1118,6 +1130,10 @@ end
 if (_PLATFORM_MACOS) then
   defines {
     cocoa_defines,
+  }
+
+  buildoptions {
+    "-Wno-error=implicit-function-declaration", -- turn off clang 16+ warning that turned to error for ISO 99 calls
   }
 
   configuration { "ARM64" }
